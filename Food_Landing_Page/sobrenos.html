@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<style>
+    /* Variáveis de cores */
+:root {
+    --primary-color: #8B0000; /* Bordô para toques elegantes */
+    --secondary-color: #f3f0e6; /* Bege claro para fundo suave */
+    --accent-color: #444; /* Cinza escuro para texto */
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    line-height: 1.6;
+}
+
+/* Seção de História */
+.history-section {
+    padding: 80px 20px;
+    background-image: url('images/italiano.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 3rem;
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-family: var(--font-secondary);
+    margin-bottom: 40px;
+}
+
+/* Conteúdo da História */
+.history-content {
+    text-align: left;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+.paragraph {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.paragraph:first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.7rem;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+
+</style>
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História - Ristorante Italiano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="history-section">
+        <div class="container">
+            <h1 class="title">Nossa História</h1>
+            <p class="subtitle">Uma tradição de sabores autênticos desde 1934</p>
+            <div class="history-content">
+                <p class="paragraph">
+                    Fundado em 1934 no coração da Itália, o Barcarollo começou como um pequeno refúgio para amantes da culinária tradicional. A ideia nasceu da paixão dos fundadores, Carmelitta e Paulo, que desejavam compartilhar as receitas de família passadas de geração em geração. Com um ambiente acolhedor e pratos feitos com ingredientes frescos da região, o restaurante rapidamente se tornou um ponto de encontro para amigos e familiares.
+                </p>
+                <p class="paragraph">
+                    Durante os anos, o Barcarollo cresceu, mas sem nunca perder sua essência. Nossa missão sempre foi preservar as tradições e oferecer uma experiência genuinamente italiana, com pratos artesanais que capturam o espírito da Itália. Hoje, continuamos a servir nossos clientes com o mesmo amor e dedicação de décadas atrás, mantendo viva a nossa rica herança cultural.
+                </p>
+                <p class="paragraph">
+                    Venha nos visitar e experimente a verdadeira essência da Itália em cada prato. Cada refeição é uma celebração de nossa história, dos sabores autênticos e do compromisso com a qualidade que sempre nos guiou.
+                </p>
+            </div>
+        </div>
+    </section>
+<footer class="footer">
+    <p>&copy; 2024 Barcarollo Gastronomia. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

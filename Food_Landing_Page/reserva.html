@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva - Barcarollo</title>
+
+
+<style>
+    /* styles.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background-color: #f8f1e5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  background-color: #b23a3a;
+  padding: 20px;
+  color: white;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+main {
+  background: #fff5e4;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.reserva-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.opcao {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+  color: #b23a3a;
+}
+
+input[type="date"], select, input[type="number"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #b23a3a;
+  border-radius: 5px;
+  background-color: #fdf2e3;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="date"]:hover, select:hover, input[type="number"]:hover {
+  border-color: #9c2e2e;
+}
+
+input[type="number"] {
+  width: 70px;
+}
+
+.reserva-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #b23a3a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reserva-btn:hover {
+  background-color: #9c2e2e;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #b23a3a;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+</style>
+
+
+
+</head>
+<body>
+  <header>
+    <h1>Barcarollo Gastronomia</h1>
+    <p>Faça sua reserva e experimente o melhor da cozinha italiana!</p>
+  </header>
+
+  <main>
+    <!-- Seção de Escolha de Opções de Reserva -->
+    <section class="reserva-opcoes">
+      <!-- Escolha de Data -->
+      <div class="opcao">
+        <label for="data-reserva">Data da reserva:</label>
+        <input type="date" id="data-reserva" name="data-reserva">
+      </div>
+
+      <!-- Escolha de Região -->
+      <div class="opcao">
+        <label for="regiao-reserva">Escolha a região:</label>
+        <select id="regiao-reserva" name="regiao-reserva">
+          <option value="salao-principal">Salão Principal</option>
+          <option value="terraço">Terraço</option>
+          <option value="jardim">Jardim</option>
+          <option value="privado">Área Privada</option>
+        </select>
+      </div>
+
+      <!-- Escolha do Serviço -->
+      <div class="opcao">
+        <label for="servico-reserva">Escolha o serviço:</label>
+        <select id="servico-reserva" name="servico-reserva">
+          <option value="almoco">Almoço</option>
+          <option value="jantar">Jantar</option>
+          <option value="cafe-da-manha">Café da Manhã</option>
+        </select>
+      </div>
+
+      <!-- Escolha do Ambiente -->
+      <div class="opcao">
+        <label for="ambiente-reserva">Escolha o ambiente:</label>
+        <select id="ambiente-reserva" name="ambiente-reserva">
+          <option value="interno">Interno</option>
+          <option value="externo">Externo</option>
+        </select>
+      </div>
+
+      <!-- Escolha do Número de Pessoas -->
+      <div class="opcao">
+        <label for="pessoas-reserva">Número de pessoas:</label>
+        <input type="number" id="pessoas-reserva" name="pessoas-reserva" min="1" max="20" value="1">
+      </div>
+    </section>
+
+    <!-- Botão de Confirmar Reserva -->
+    <button class="reserva-btn">Confirmar Reserva</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Barcarollo Gastronomia - Sabores da Itália</p>
+  </footer>
+</body>
+</html>

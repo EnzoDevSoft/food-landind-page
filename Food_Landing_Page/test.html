@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços do Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<style>
+    /* Variáveis para cores e fontes */
+:root {
+    --primary-color: #8B0000;          /* Bordô */
+    --secondary-color: #ffffff;        /* Branco */
+    --button-color: #4CAF50;           /* Verde para botões */
+    --text-color: #333;
+    --background-color: #f8f9fa;       /* Fundo suave */
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Seção de Serviços */
+.services-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo para cada caixa de serviço */
+.service-box {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icon-title i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.service-box h2 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #000000;
+    margin: 15px 0 20px;
+}
+
+/* Botão estilizado */
+.service-box button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(117, 42, 42);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.service-box button:hover {
+    background-color: #419246;
+}
+
+/* Especificidade de cores de fundo para cada seção */
+.delivery {
+    background-color: #ffffff;
+}
+
+.reservations {
+    background-color: #ffffff;
+}
+
+.birthdays {
+    background-color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilo da seção de vídeo */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Ocupa metade da altura da tela */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%; /* Centraliza o vídeo verticalmente */
+    left: 50%; /* Centraliza o vídeo horizontalmente */
+    width: 100vw; /* Largura máxima para cobrir toda a largura da viewport */
+    height: auto;
+    min-height: 50vh; /* Garante que cubra metade da tela na altura */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+/* Estilo para o conteúdo sobre o vídeo */
+.content {
+    position: relative;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #963333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c56161;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navbar fixa no topo */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff; /* Cor de fundo clara */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    z-index: 1000;
+}
+
+/* Logo do restaurante */
+.logo a {
+    font-size: 1.5rem;
+    color: #962525; /* Cor inspirada em tons de vinho */
+    font-family: 'Georgia', serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Lista de navegação */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px; /* Espaçamento entre os itens */
+}
+
+.nav-list li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-list li a:hover {
+    color: #962525; /* Tom de destaque */
+    border: 2px solid #be9595;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-list {
+        gap: 15px;
+    }
+
+    .logo a {
+        font-size: 1.3rem;
+    }
+
+    .nav-list li a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos da Seção de Serviços */
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Cabeçalho da Card de Serviço */
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.service-card h2 {
+    font-size: 1.5rem;
+    color: #b3541e;
+}
+
+/* Texto e Botão */
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.service-card button {
+    background-color: #b3541e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-card button:hover {
+    background-color: #8a3e17;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
+
+
+
+
+
+</style>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Italiano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">Barcarollo</a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="sobrenos.html">Sobre</a></li>
+                <li><a href="sobre.html">Mais Populares</a></li>
+                <li><a href="reserva.html">Reservar</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+
+<body>
+    <!-- Seção com Vídeo em Tela Cheia -->
+    <section class="video-container">
+        <div class="content">
+            <h1>O melhor da culinária italiana!</h1>
+            <p>Experimente a verdadeira gastronomia italiana.</p>
+            <a href="reserva.html" class="cta-button">Reservar agora</a>
+        </div>
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="video/910-141888470.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
+        </video>
+    </section>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Barcarollo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="services">
+        <!-- Delivery -->
+        <div class="service-card">
+            <div class="service-header">
+                <img src="motoboy-icon.png" alt="Ícone de Motoboy" class="icon">
+                <h2>Delivery</h2>
+            </div>
+            <p>Escolha seu pedido com facilidade e receba onde estiver.</p>
+            <button onclick="window.location.href='#'">Faça seu Pedido</button>
+        </div>
+
+        <!-- Reservas -->
+        <div class="service-card">
+            <div class="service-header">
+                <img src="calendar-icon.png" alt="Ícone de Calendário" class="icon">
+                <h2>Reservas</h2>
+            </div>
+            <p>Faça sua reserva online e garanta sua mesa.</p>
+            <button onclick="window.location.href='#'">Fazer Reserva</button>
+        </div>
+
+        <!-- Aniversários -->
+        <div class="service-card">
+            <div class="service-header">
+                <img src="balloon-icon.png" alt="Ícone de Balão" class="icon">
+                <h2>Aniversários</h2>
+            </div>
+            <p>O aniversariante não paga pela sequência completa.</p>
+            <button onclick="window.location.href='#'">Cadastre-se</button>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
